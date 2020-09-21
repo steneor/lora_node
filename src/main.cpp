@@ -17,7 +17,6 @@ uint8_t coords[11];
 TinyGPSPlus gps;
 AltSoftSerial ss(RXPin, TXPin); // RX, TX
 
-/************************** Example Begins Here ***********************************/
 // Données à envoyer vers TTN (payload)
 unsigned char loraData[19] = {0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,0x20, 0x20, 0x20, 0x20};
 
@@ -84,7 +83,6 @@ void get_coords () {
 
 }
 
-
 //# define LED_BUILTIN 7
 const int batterie = A0; // pont diviseur tension batterie 1M 330K
 
@@ -98,14 +96,14 @@ const int batterie = A0; // pont diviseur tension batterie 1M 330K
 #define DefDevAddr {0x00, 0x00, 0x00, 0x00}; // msb
 
 
-  // Network Session Key (MSB)
-  uint8_t NwkSkey[16] = DefNwkSkey ; // MSB
+// Network Session Key (MSB)
+uint8_t NwkSkey[16] = DefNwkSkey ; // MSB
 
-  // Application Session Key (MSB)
-  uint8_t AppSkey[16] = DefAppSkey ;// MSB
+// Application Session Key (MSB)
+uint8_t AppSkey[16] = DefAppSkey ;// MSB
 
-  // Device Address (MSB)
-  uint8_t DevAddr[4] = DefDevAddr; // msb
+// Device Address (MSB)
+uint8_t DevAddr[4] = DefDevAddr; // msb
 
 /************************** Configuration mesure batterie ***********************************/
 // exemple pont diviseur: 1M, 330K divider across battery and using internal ADC ref of 1.1V
@@ -170,7 +168,7 @@ unsigned int getBatteryCapacity(unsigned lecture_dac)
 #include <DallasTemperature.h>
 
 // GPIO where the DS18B20 is connected to
-const int oneWireBus = 7; //9 ok
+const int oneWireBus = 6; //6 or 9 ok
 // Setup a oneWire instance to communicate with any OneWire devices
 OneWire oneWire(oneWireBus);
 
