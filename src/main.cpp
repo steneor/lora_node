@@ -1,15 +1,4 @@
 #include <Arduino.h>
-
-// Hellooooooooooooooooo la passerelle LoRa Single Channel - ABP TTN Single Channel Packet Sender
-// Tutorial Link: https://learn.adafruit.com/the-things-network-for-feather/using-a-feather-32u4
-//
-// Adafruit invests time and resources providing this open source code.
-// Please support Adafruit and open source hardware by purchasing
-// products from Adafruit!
-//
-// Copyright 2015, 2016 Ideetron B.V.
-//
-// Modified by Brent Rubell for Adafruit Industries, 2018
 /************************** Configuration ***********************************/
 #define EU863 ///< Used in Europe
 
@@ -30,7 +19,6 @@ AltSoftSerial ss(RXPin, TXPin); // RX, TX
 
 /************************** Example Begins Here ***********************************/
 // Données à envoyer vers TTN (payload)
-//unsigned char loraData[7] = {0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20};
 unsigned char loraData[19] = {0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,0x20, 0x20, 0x20, 0x20};
 
 
