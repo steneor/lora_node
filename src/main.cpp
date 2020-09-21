@@ -175,8 +175,6 @@ OneWire oneWire(oneWireBus);
 // Pass our oneWire reference to Dallas Temperature sensor 
 DallasTemperature sensors(&oneWire);
 
-
-
 // délai entre deux émissions en seconde
 // pour 10 minutes -> cad 600 s / 8 s = 75
 //pour 2 minutes -> cad 120 s / 8 = 15
